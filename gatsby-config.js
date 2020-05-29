@@ -6,5 +6,19 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Mediterra`,
+    siteUrl: `https://wdev.be/wdev_gentian/mediterra/`,
+    description: `Website mediterra foodtruck`,
+  },
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `docs`,
+        path: `${__dirname}/../docs/`,
+      },
+    },
+  ],
 }
